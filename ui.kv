@@ -64,7 +64,7 @@
             text: "新建"
             size_hint_x: None
             width: "84dp"
-            on_release: root.open_create_dialog()
+            on_release: app.open_create_dialog()
 
     ScreenManager:
         id: sm
@@ -120,6 +120,9 @@
 
 
 <TableListRow@BoxLayout>:
+    table_id: ""
+    name_text: ""
+    sub_text: ""
     orientation: "horizontal"
     padding: "10dp"
     spacing: "10dp"
