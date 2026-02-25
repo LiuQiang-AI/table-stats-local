@@ -27,9 +27,19 @@ jobs:
             build-essential git zip unzip \
             openjdk-17-jdk \
             python3-dev python3-pip \
-            libffi-dev libssl-dev \
+            libffi-dev libssl-dev libltdl-dev \
             pkg-config autoconf automake libtool libtool-bin autoconf-archive \
             zlib1g-dev
+
+      - name: Autotools diagnostics
+        run: |
+          set -eux
+          command -v autoconf && autoconf --version | head -n 1
+          command -v automake && automake --version | head -n 1
+          command -v aclocal && aclocal --version | head -n 1
+          command -v libtoolize && libtoolize --version | head -n 1
+          echo "aclocal dir: $(aclocal --print-ac-dir)"
+          ls -la "$(aclocal --print-ac-dir)" | sed -n '1,120p'
 
       - name: Install Buildozer
         run: |
