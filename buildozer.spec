@@ -11,15 +11,18 @@ requirements = python3,kivy==2.3.1
 orientation = portrait
 fullscreen = 0
 
+# Android (must be in [app] with android.* keys)
+android.accept_sdk_license = True
+android.api = 34
+android.minapi = 23
+android.ndk_api = 23
+android.archs = arm64-v8a, armeabi-v7a
+
 # 建议首次打包先用 debug
 # buildozer -v android debug
 
 [buildozer]
 log_level = 2
-
-[android]
-minapi = 23
-ndk_api = 23
 
 # 如果你后续要把“导出 CSV 到 Downloads/分享”做成原生 Intent，
 # 再按需增加权限与 Java 依赖（当前实现导出到应用私有目录即可满足离线要求）。

@@ -49,7 +49,8 @@ jobs:
           # Avoid some CI issues with terminal handling
           TERM: xterm-256color
         run: |
-          buildozer -v android debug
+          # Auto-accept Android SDK licenses in CI
+          yes | buildozer -v android debug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
