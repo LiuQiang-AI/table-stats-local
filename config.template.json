@@ -1,0 +1,11 @@
+{
+  "recentTableIds": [],
+  "recentLimit": 12,
+  "autosaveMs": 600,
+  "initialRows": 31,
+  "defaultVehicle": "蒙J87721",
+  "defaultModel": "PAC",
+  "loadPlaces": ["装车地A", "装车地B", "装车地C"],
+  "unloadPlaces": ["卸货地A", "卸货地B", "卸货地C"]
+}
+
